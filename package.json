@@ -1,0 +1,39 @@
+{
+  "name": "ci-build-tools",
+  "version": "0.0.0",
+  "description": "CI Build tools to reduce layer integration between build tasks and CI implementation.",
+  "main": "lib/ci-build-tools.js",
+  "files": [
+    "LICENSE",
+    "CHANGELOG.md",
+    "README.md",
+    "lib"
+  ],
+  "scripts": {
+    "test": "mocha test -R spec"
+  },
+  "dependencies" : {
+    "semver": "^5.0.3"
+  },
+  "devDependencies": {
+    "commander": "^2.5.0",
+    "chai": "^3.2.0",
+    "mocha": "^2.2.5",
+    "sinon": "^1.17.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wparad/node-ci-build-tools.git"
+  },
+  "keywords": [
+    "Travis-CI",
+    "package creation",
+    "microservice"
+  ],
+  "author": "Warren Parad <wparad@gmail.com> (http://wparad.github.io)",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/wparad/node-ci-build-tools/issues"
+  },
+  "homepage": "https://github.com/wparad/Jnode-ci-build-tools#readme"
+}

@@ -1,0 +1,23 @@
+language: node_js
+node_js:
+- '4.1'
+before_script:
+- node make.js build
+before_deploy:
+- node make.js after_build
+deploy:
+  provider: npm
+  email: wparad@gmail.com
+  api_key:
+    secure: lVcKcKThyFTX8v073E33Eo6bQKiwzAHRj9rYx043p+Fl9u0HxAODmAv5gPDBnBqbb+lDdAyPkSp3CXm2lzXeZb+k5sStlqjTXLevAUq4lMl0RhRAqaZ3OOgN632njEL9DLrIKKE9OFzREUl0MZuqKd0d3WpaTUX1xVw4vtfiIRD+FJgEGRgse8fpejsJGVn0xUo06N68L/644Sm1m6UQ3LNvTD11fKrvIZUE36Swg/lCVvEKexgauLJ1lYBiu1a8W7RrxCYQhaAXWHRYErwduxuz9h6CEZ1yI2ltkOcGbc9gaMiqcs6HeceyMwvipn4pmVyxI+vt6uHlIJdm7VgpNvJn0jYYQucLPOwvJtigAYvWmyfyMSq6Nriwt9B4o8UgX1xkIsbPvrUZ6wMxv1opnpO+L2KsxmTf9piQc7JcGX/6exnKXfKfNxXH30XAX/1mg/QmSlCcdURm9UWWX0ILFrS7DKCb950cmK2k8Li50m70DzT2Oq9ykcdV9C2Dg6R8VT8RzxdUhzUDjWLVCR5mt/0nepT4fWE0Adbxgv98GPoSI1fX4LgKtTM0dBF2y8v8CueNqNKjv8QpPRYccspoN+2mEIbKVUC2d+rEfsMggV9y26ssr7oisljT4Cs6YCO38JBamVbZGg7nllyOKSrzRQ8/OL/0U/MEY1Mvrpe6Wwg=
+  skip_cleanup: true
+  on:
+    all_branches: true
+    condition: "$TRAVIS_BRANCH != master"
+branches:
+  only:
+  - master
+  - "/^release.*/"
+env:
+  global:
+  - secure: DcR53iBSnOhxzqkXHR7ZsX/Hr04hMth8amUJbdusLczvKLvXVfOjvG1b2lN74B+Vx9cdyAbgUEs9/c8jC4+f3vvL/YtDvUkU78Z6i16lFZAncfYuoOpkK9eyXGYcEVZLNHxowsx8mQoJvoM2pE42zH9ijDpWEqemLSEsqEsBmnRdzXC9IywjHjgeRcHNnCCs66LFiEYIrrn1iBmGdvwmIFx7NDnAw9jkyWCUQUesP5dJ5UkEMavKpk4k+rsMUVqURs/HVcopboGFw06qKNLBYfotmxb6vjF45rPpD+IJdhAZZ9ygan4abPT2d9eTDv5EWa7WA7XZv+wUcR+6fv8vgYZCJfnjLslEr0av+5XU+qnsfIap5SOvqfanvotv4EcU/EGqHm7T5GeYzZw7abob6QircK2mbwVSvhQCLtXQ8CbaCD3GKU/AhRuYlu9z+/bR5zyNHetFvIugk2dVFuvhAxQdjJz/zQrvEtDuJUpmxX7dx4TexvykzK6pDzWWzO5OBPwn/hD5xPr2Y00f6z+j3Xpa+WOfpL6YIJLT3jh2g5j3xAduyf7YiXVpgceoH9csuuH/j+u0syEd52WkhUV33LG48MvwaeQ6NI3V0icSJNKv18ldMUeEziUZmo2JaKAYCPzRmTtW642VZ7sikrMa3JlnaS0kwOUgizR6XKFLflA=
