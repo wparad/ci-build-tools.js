@@ -12,7 +12,7 @@
   "scripts": {
     "test": "mocha test -R spec"
   },
-  "dependencies" : {
+  "dependencies": {
     "semver": "^5.0.3"
   },
   "devDependencies": {
