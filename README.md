@@ -3,6 +3,10 @@ Node NPM build tools library.
 
 [![npm version](https://badge.fury.io/js/node-ci-build-tools.svg)](https://badge.fury.io/js/node-ci-build-tools) [![Build Status](https://travis-ci.org/wparad/node-ci-build-tools.svg?branch=master)](https://travis-ci.org/wparad/node-ci-build-tools)
 
+## Support:
+* Travis-CI
+* JenkinsCI (Stash integration environment variables)
+
 ### Usage
 
 ```javascript

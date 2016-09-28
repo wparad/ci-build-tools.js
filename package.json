@@ -27,6 +27,7 @@
   },
   "keywords": [
     "Travis-CI",
+    "Jenkins-CI",
     "package creation",
     "microservice"
   ],
