@@ -1,7 +1,7 @@
 # CI Build Tools
 Node NPM build tools library.
 
-[![npm version](https://badge.fury.io/js/node-ci-build-tools.svg)](https://badge.fury.io/js/node-ci-build-tools) [![Build Status](https://travis-ci.org/wparad/node-ci-build-tools.svg?branch=master)](https://travis-ci.org/wparad/node-ci-build-tools)
+[![npm version](https://badge.fury.io/js/ci-build-tools.svg)](https://badge.fury.io/js/ci-build-tools) [![Build Status](https://travis-ci.org/wparad/ci-build-tools.js.svg?branch=master)](https://travis-ci.org/wparad/ci-build-tools.js)
 
 ## Support:
 * Travis-CI
@@ -38,5 +38,8 @@ Update .travis.yml keys (replacing git_api_key and deployment_key)
 * `apt-get install ruby-dev`
 * `gem install travis`
 * Setup [Travis-CI](https://travis-ci.org/profile/) build on the repository.
-* `travis encrypt --add env.globalGIT_TAG_PUSHER=git_api_key`
-* `travis encrypt --add deploy.api_key deployment_key`
+* (replace *git_api_key* with the key): `travis encrypt --add env.global GIT_TAG_PUSHER=git_api_key`
+   * Create a Github api access key with the following access:
+     * repo_deployment
+     * public_repo
+* (replace *deployment_key* with the key): `travis encrypt --add deploy.api_key deployment_key`
